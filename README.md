@@ -34,7 +34,7 @@ M:\
 │       │   ├── CachedSpells\
 │       │   └── Experimental\
 │       │        └── Sandbox\
-│       │             └── [暂存的危险法术]
+│       │             └── [Temporary dangerous spells]
 │       │
 │       ├── Resources\
 │       │   ├── ManaBank\
