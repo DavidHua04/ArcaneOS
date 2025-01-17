@@ -1,6 +1,6 @@
 # ArcaneOS
 
-**ArcaneOS** is a magical computing system that allows its user (the protagonist) to create, upgrade, and execute powerful spells based on computational principles. It combines the logical power of an Operating System with the mystical energy of arcane magic, enabling complex spellcasting, resource management, and environment manipulation.
+**ArcaneOS** is a magical computing system that allows its user (the user) to create, upgrade, and execute powerful spells based on computational principles. It combines the logical power of an Operating System with the mystical energy of arcane magic, enabling complex spellcasting, resource management, and environment manipulation.
 
 ## Features
 
@@ -18,7 +18,7 @@ The repository contains the following sections:
 - **Spells**: Scripts and configurations for creating and managing various spells.
 - **Resources**: Data and configurations related to the flow of mana, energy, and materials.
 - **System**: Core components of ArcaneOS, including kernel files, drivers, and backup systems.
-- **Projects**: Large-scale, experimental spell systems and magical constructs the protagonist is working on.
+- **Projects**: Large-scale, experimental spell systems and magical constructs the user is working on.
 - **Settings**: User preferences and system configurations, ensuring the smooth operation of the ArcaneOS.
 
 ## Getting Started
