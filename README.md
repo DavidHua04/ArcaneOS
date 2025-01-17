@@ -21,6 +21,69 @@ The repository contains the following sections:
 - **Projects**: Large-scale, experimental spell systems and magical constructs the user is working on.
 - **Settings**: User preferences and system configurations, ensuring the smooth operation of the ArcaneOS.
 
+```
+M:\
+│
+├── Users\
+│   └── Ling\
+│       ├── Spells\
+│       │   ├── BasicSpells\
+│       │   ├── FunctionSpells\
+│       │   ├── OOPSpells\
+│       │   ├── DistributedSpells\
+│       │   ├── CachedSpells\
+│       │   └── Experimental\
+│       │        └── Sandbox\
+│       │             └── [暂存的危险法术]
+│       │
+│       ├── Resources\
+│       │   ├── ManaBank\
+│       │   ├── EnergyFlows\
+│       │   └── SpellMaterials\
+│       │
+│       ├── Logs\
+│       │   ├── ErrorLogs\
+│       │   ├── SpellPerformance\
+│       │   └── SystemEvents\
+│       │
+│       ├── Projects\
+│       │   ├── GrandShield.v2\
+│       │   ├── TempControlSystem\
+│       │   └── AntiGravitySpell\
+│       │
+│       ├── System\
+│       │   ├── Kernels\
+│       │   │   ├── MagicOS_v1.0.kernel\
+│       │   │   ├── ParallelExecution_v2.3.kernel\
+│       │   │   └── TimeDilation_v5.1.kernel\
+│       │   ├── Drivers\
+│       │   │   ├── ManaFlowDriver.sys\
+│       │   │   └── MultiThreadSpellDriver.sys\
+│       │   ├── Backups\
+│       │   └── Updates\
+│       │        ├── Patch_1.7\
+│       │        └── MajorUpdate_2.0\
+│       │
+│       ├── Network\
+│       │   ├── LinkedNodes\
+│       │   │   ├── [Node_1]\
+│       │   │   ├── [Node_2]\
+│       │   │   └── [Node_3]\
+│       │   └── DistributedSpells\
+│       │
+│       └── Settings\
+│           ├── UserProfile\
+│           ├── SpellPreferences\
+│           └── ResourceLimits\
+│
+└── Global\
+    ├── SharedSpells\
+    ├── UniversalSettings\
+    ├── PlanetaryGrids\
+    ├── EnvironmentalMonitors\
+    └── SystemWideEvents\
+```
+
 ## Getting Started
 
 ### Prerequisites
