@@ -1,0 +1,35 @@
+/* 基础颜色方案 */
+:root {
+    --primary-color: #2c3e50;   /* 深蓝灰 */
+    --secondary-color: #95a5a6; /* 烟灰色 */
+    --accent-color: #e74c3c;    /* 暗红色 */
+}
+
+/* 排版系统 */
+body {
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.3em;
+}
+
+.path-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px 0;
+}
+
+/* 危险警示样式 */
+.spectrum-warning {
+    padding: 15px;
+    background: #fff3cd;
+    border-left: 4px solid #ffeeba;
+    margin: 20px 0;
+}
