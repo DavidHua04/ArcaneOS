@@ -35,7 +35,7 @@ h1 {
 }
 
 /* 形式科学谱系图标 */
-.formal-science-icon {
+.science-icon {
     position: relative;
     display: inline-block;
     width: 40px;
@@ -50,7 +50,7 @@ h1 {
     top: -2px; /* 根据需要调整 */
 }
 
-.formal-science-icon::before {
+.science-icon::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -62,7 +62,7 @@ h1 {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.formal-science-icon::after {
+.science-icon::after {
     content: "\f1c9"; /* Font Awesome的递归图标 */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -75,11 +75,208 @@ h1 {
     opacity: 0.8;
 }
 
-.formal-science-icon:hover {
+.science-icon:hover {
     transform: rotate(135deg);
     transition: transform 0.4s ease;
 }
-.formal-science-icon:hover::after {
+.science-icon:hover::after {
     opacity: 1;
     color: #c0392b;
+}
+
+/* 工学谱系图标 */
+.engineering-icon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #4a5568 30%, #2d3748 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transform: rotate(0deg);
+    animation: rotateGear 6s linear infinite;
+    vertical-align: middle; /* 使图标与文字垂直居中对齐 */
+    position: relative;
+    top: -2px; /* 根据需要调整 */
+}
+
+.engineering-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    border: 3px solid #63b3ed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    animation: pulseRing 3s ease-in-out infinite;
+}
+
+.engineering-icon::after {
+    content: "⚙️"; /* 齿轮图标 */
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e2e8f0;
+}
+
+/* 齿轮旋转动画 */
+@keyframes rotateGear {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 应力环脉冲动画 */
+@keyframes pulseRing {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.4; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+}
+
+/* 人文社科谱系图标 */
+.humanities-icon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #2f855a 30%, #276749 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    vertical-align: middle; /* 使图标与文字垂直居中对齐 */
+    position: relative;
+    top: -2px; /* 根据需要调整 */
+}
+
+.humanities-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background: #ecc94b;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: flipBook 3s ease-in-out infinite;
+}
+
+.humanities-icon::after {
+    content: "📖"; /* 书本图标 */
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #2f855a;
+}
+
+/* 书本翻页动画 */
+@keyframes flipBook {
+    0% { transform: translate(-50%, -50%) rotateY(0deg); }
+    50% { transform: translate(-50%, -50%) rotateY(180deg); }
+    100% { transform: translate(-50%, -50%) rotateY(0deg); }
+}
+
+/* 生命谱系图标 */
+.life-science-icon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #1a365d 30%, #2a4365 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    vertical-align: middle; /* 使图标与文字垂直居中对齐 */
+    position: relative;
+    top: -2px; /* 根据需要调整 */
+}
+
+.life-science-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    background: #48bb78;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    animation: pulseNucleus 2s ease-in-out infinite;
+}
+
+.life-science-icon::after {
+    content: "🧬"; /* DNA图标 */
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    color: #c6f6d5;
+    animation: rotateDNA 4s linear infinite;
+}
+
+/* 细胞核脉动动画 */
+@keyframes pulseNucleus {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.6; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+}
+
+/* DNA旋转动画 */
+@keyframes rotateDNA {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 经管法谱系图标 */
+.law-economics-icon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #4c1d95 30%, #6b46c1 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    vertical-align: middle; /* 使图标与文字垂直居中对齐 */
+    position: relative;
+    top: -2px; /* 根据需要调整 */
+}
+
+.law-economics-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background: #f6e05e;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: swingBalance 3s ease-in-out infinite;
+}
+
+.law-economics-icon::after {
+    content: "⚖️"; /* 天平图标 */
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c1d95;
+}
+
+/* 天平摆动动画 */
+@keyframes swingBalance {
+    0% { transform: translate(-50%, -50%) rotate(-15deg); }
+    50% { transform: translate(-50%, -50%) rotate(15deg); }
+    100% { transform: translate(-50%, -50%) rotate(-15deg); }
 }
