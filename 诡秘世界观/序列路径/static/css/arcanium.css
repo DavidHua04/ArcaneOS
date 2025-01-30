@@ -33,3 +33,41 @@ h1 {
     border-left: 4px solid #ffeeba;
     margin: 20px 0;
 }
+
+/* 形式科学谱系图标 */
+.formal-science-icon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #2c3e50 30%, #34495e 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transform: rotate(45deg);
+}
+
+.formal-science-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background: #ecf0f1;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.formal-science-icon::after {
+    content: "\f1c9"; /* Font Awesome的递归图标 */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #e74c3c;
+    font-size: 16px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    opacity: 0.8;
+}
