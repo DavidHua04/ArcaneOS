@@ -71,3 +71,12 @@ h1 {
     transform: translate(-50%, -50%) rotate(-45deg);
     opacity: 0.8;
 }
+
+.formal-science-icon:hover {
+    transform: rotate(135deg);
+    transition: transform 0.4s ease;
+}
+.formal-science-icon:hover::after {
+    opacity: 1;
+    color: #c0392b;
+}
