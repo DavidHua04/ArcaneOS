@@ -45,6 +45,9 @@ h1 {
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     transform: rotate(45deg);
+    vertical-align: middle; /* 使图标与文字垂直居中对齐 */
+    position: relative;
+    top: -2px; /* 根据需要调整 */
 }
 
 .formal-science-icon::before {
