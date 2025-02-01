@@ -2,93 +2,146 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>λ演算 - ArcaneOS</title>
-    <link rel="stylesheet" href="../../../static/css/arcanium.css">
+    <title>λ演算途径 - 递归基核谱系</title>
+    <style>
+        :root {
+            --obsidian: #0a0a0a;
+            --void: #1a1a1a;
+            --silver: #e8e8e8;
+            --lambda-glow: rgba(232,232,232,0.1);
+        }
+
+        body {
+            background: var(--obsidian);
+            color: var(--silver);
+            font-family: '等线', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .lambda-header {
+            text-align: center;
+            position: relative;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--silver);
+            margin-bottom: 3rem;
+        }
+
+        .lambda-header::before {
+            content: "λ";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.03;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            font-family: monospace;
+            pointer-events: none;
+        }
+
+        .sequence-card {
+            background: var(--void);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sequence-card:hover {
+            border-color: var(--silver);
+            box-shadow: 0 0 20px var(--lambda-glow);
+        }
+
+        .sequence-card::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, 
+                transparent 60%, 
+                var(--lambda-glow) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .sequence-card:hover::after {
+            opacity: 1;
+        }
+
+        .sequence-level {
+            font-size: 1.2rem;
+            color: #666;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        }
+
+        .ability-list {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        .ability-list li::before {
+            content: "λ";
+            font-family: monospace;
+            display: inline-block;
+            width: 1.5rem;
+            margin-left: -1.5rem;
+            opacity: 0.5;
+        }
+
+        .warning {
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px dashed #333;
+            padding-top: 1rem;
+            margin-top: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <nav aria-label="导航">
-            <a href="../recursive-core.html">溯源：递归基核</a>
-        </nav>
-        
-        <header>
-            <h1>
-                <svg class="triangle-icon left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                <svg class="triangle-icon right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                <svg class="triangle-icon left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                <svg class="triangle-icon right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                <svg class="triangle-icon left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                λ演算
-                <svg class="triangle-icon right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                <svg class="triangle-icon left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                <svg class="triangle-icon right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>  
-                <svg class="triangle-icon left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>
-                <svg class="triangle-icon right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L22 20H2L12 2Z"></path>
-                </svg>  
-            </h1>
-            <p class="subtitle">由无限齿轮嵌套而成的机械心脏</p>
-        </header>
-        
-        <section class="intro">
-            <h2>概述</h2>
-            <p>递归基核谱系是计算机科学在异常维度中的映射，其能力者能够操纵信息流、解构逻辑结构，甚至短暂修改局部物理法则。</p>
-            <p>深入此谱系者需警惕认知畸变，所有完美结构都暗藏无限疯长的触须。</p>
-        </section>
-        
-        <section class="paths">
-            <h2>关联途径</h2>
-            <ul class="path-list">
-                <li>
-                    <a href="lambda-path/lambda-calculation.html">λ演算途径</a>
-                    <p>序列4「类型巫妖」可进行柯里化变形...</p>
-                </li>
-                <li>
-                    <a href="closure-path/index.html">闭包编织者</a>
-                    <p>序列4「类型巫妖」可进行柯里化变形...</p>
-                </li>
-                <li>
-                    <a href="type-lich-path/index.html">类型巫妖</a>
-                    <p>序列4「类型巫妖」可进行柯里化变形...</p>
-                </li>
-            </ul>
-        </section>
+    <header class="lambda-header">
+        <h1>λ演算途径</h1>
+        <p>所有函数终将归于不动点</p>
+    </header>
 
-        <section class="paths">
-            <h2>收容物</h2>
-            <ul class="path-list">
-                <li>
-                    <a href="lambda-path/index.html">λ演算途径</a>
-                    <p>序列4「类型巫妖」可进行柯里化变形...</p>
-                </li>
-                <li>
-                    <a href="closure-path/index.html">闭包编织者</a>
-                    <p>序列4「类型巫妖」可进行柯里化变形...</p>
-                </li>
-                <li>
-                    <a href="type-lich-path/index.html">类型巫妖</a>
-                    <p>序列4「类型巫妖」可进行柯里化变形...</p>
-                </li>
-            </ul>
-        </section>
-    </div>
+    <article class="sequence-card">
+        <h2>序列9 - 形式学徒</h2>
+        <div class="sequence-level">基础归约</div>
+        <ul class="ability-list">
+            <li>识别简单λ表达式的自由变量</li>
+            <li>执行β归约（每日限3次）</li>
+            <li>感知语法树的基本结构</li>
+        </ul>
+        <div class="warning">代价：每周需完成Church编码转换练习</div>
+    </article>
+
+    <article class="sequence-card">
+        <h2>序列7 - 闭包编织者</h2>
+        <div class="sequence-level">词法作用域</div>
+        <ul class="ability-list">
+            <li>捕获环境变量形成闭包</li>
+            <li>临时修改局部作用域规则</li>
+            <li>构建高阶函数模板</li>
+        </ul>
+        <div class="warning">代价：记忆空间以二叉树形式增长</div>
+    </article>
+
+    <article class="sequence-card">
+        <h2>序列5 - 不动点巫妖</h2>
+        <div class="sequence-level">Y组合子</div>
+        <ul class="ability-list">
+            <li>实现无限递归的自我指涉</li>
+            <li>解构复杂递归结构</li>
+            <li>免疫非形式化攻击</li>
+        </ul>
+        <div class="warning">代价：失去理解非递归思维的能力</div>
+    </article>
 </body>
 </html>
