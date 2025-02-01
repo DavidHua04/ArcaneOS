@@ -5,6 +5,26 @@
     <title>递归基核谱系 - ArcaneOS</title>
     <link rel="stylesheet" href="../../static/css/arcanium.css">
 </head>
+<script>
+    function toggleNightMode() {
+        document.documentElement.classList.toggle('dark-mode');
+    }
+</script>
+<button class="dark-mode-toggle" onclick="toggleNightMode()">Dark</button>
+<script>
+    document.addEventListener('mousemove', function(e) {
+        const button = document.querySelector('.dark-mode-toggle');
+        const rect = button.getBoundingClientRect();
+        const distance = Math.hypot(rect.x + rect.width / 2 - e.clientX, rect.y + rect.height / 2 - e.clientY);
+
+        if (distance < 120) {
+            const opacity = 1 - distance / 120;
+            button.style.opacity = Math.max(opacity, 0.1); // 保证透明度不低于0.2
+        } else {
+            button.style.opacity = 0.1; // 如果距离超过50像素，透明度返回0.2
+        }
+    });
+</script>
 <body>
     <div class="container">
         <nav aria-label="导航">
