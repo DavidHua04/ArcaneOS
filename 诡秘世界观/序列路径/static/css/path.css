@@ -1,0 +1,162 @@
+:root {
+    --obsidian: #0a0a0a;
+    --void: #1a1a1a;
+    --silver: #e8e8e8;
+    --lambda-glow: rgba(232,232,232,0.1);
+}
+
+/* h1 {
+    font-size: 2rem;
+} */
+
+body {
+    background: var(--obsidian);
+    color: var(--silver);
+    font-family: '等线', 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.lambda-header {
+    text-align: center;
+    position: relative;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--silver);
+    margin-bottom: 3rem;
+}
+
+.lambda-header::before {
+    content: "λ";
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.03;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: monospace;
+    pointer-events: none;
+}
+
+.sequence-card {
+    background: var(--void);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sequence-card:hover {
+    border-color: var(--silver);
+    box-shadow: 0 0 20px var(--lambda-glow);
+}
+
+.sequence-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, 
+        transparent 60%, 
+        var(--lambda-glow) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sequence-card:hover::after {
+    opacity: 1;
+}
+
+.sequence-level {
+    font-size: 1.2rem;
+    color: #666;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+.sequence-path {
+    font-family: '等线', sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #0d1117;
+    color: #c9d1d9;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.sequence-tier {
+    border-left: 4px solid #238636;
+    padding-left: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.tier-number {
+    font-size: 2.0em;
+    color: #238636;
+    text-shadow: 0 0 10px rgba(35,134,54,0.3);
+}
+.ability-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.ability-list li::before {
+    content: "λ";
+    font-family: monospace;
+    display: inline-block;
+    width: 1.5rem;
+    margin-left: -1.5rem;
+    opacity: 0.5;
+}
+.ability-card {
+    background: #161b22;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    transition: transform 0.2s;
+}
+
+.ability-card:hover {
+    transform: translateX(10px);
+}
+
+.ability-title {
+    color: #58a6ff;
+    border-bottom: 1px dashed #30363d;
+    padding-bottom: 0.5rem;
+}
+
+.mechanism {
+    color: #8b949e;
+    font-size: 0.95em;
+}
+.application {
+    background: rgba(88,166,255,0.1);
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin: 0.8rem 0;
+}
+
+.warning {
+    color: #999;
+    font-size: 0.9rem;
+    border-top: 1px dashed #333;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cost-tag {
+    display: inline-block;
+    background: #da3633;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-left: 1rem;
+}

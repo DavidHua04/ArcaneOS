@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warning[数据删除, Data Deleted]</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: red;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+    .deleted-data {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        white-space: nowrap;
+        animation: scroll 10s linear infinite;
+    }
+    @keyframes scroll {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+<div class="deleted-data">
+    <span>[数据删除, Data Deleted]</span>
+</div>
+<script>
+    const container = document.querySelector('.deleted-data');
+    for (let i = 0; i < 100; i++) {
+        container.innerHTML += '<br>[数据删除, Data Deleted][数据删除, Data Deleted]\
+        [数据删除, Data Deleted][数据删除, Data Deleted][数据删除, Data Deleted][数据删除, Data Deleted]';
+    }
+</script>
+</body>
+</html>
