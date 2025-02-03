@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象途径 - 递归基核谱系</title>
+    <link rel="stylesheet" href="../../../static\css\path.css">
+</head>
+<body>
+    <header class="lambda-header">
+        <h1>面向对象途径</h1>
+        <p>一切皆对象，万物可重构。</p>
+    </header>
+    <p>这是一条将编程哲学升华为神性的序列，
+        序列者既是代码的书写者，也是被书写的对象。
+        低序列时如同谨慎的开发者，高序列时则成为肆意重构规则的“终极开发者”。
+        然而，越是深入序列，越可能陷入“过度设计”的疯狂，
+        最终将自己迭代为一团无法维护的混乱代码山。</p>
+
+        <!-- 序列9 -->
+        <div class="sequence-tier">
+            <div class="tier-number">序列9: 实例学徒 (Instance Apprentice)</div>
+            <div class="ability-card">
+                <h3 class="ability-title">属性窥视
+                    <span class="cost-tag">精神污染</span>
+                </h3>
+                <p class="mechanism">
+                    能通过感知获得物体的基础属性信息，可获取信息范围取决于序列者可理解范围。<br>
+                    (存在被误导的可能，并且获得的信息量取决于双方能力差。)<br>
+                    过度观察有可能获得超出序列者理解范畴的信息，从而导致疯狂。
+                </p>
+            </div>
+            <div class="ability-card">
+                <h3 class="ability-title">对象感知
+                    <span class="cost-tag">精神污染</span>
+                </h3>
+                <p class="mechanism">
+                    能通过感知获得物体的基础「类」标签信息以及其基础属性，标签取决于序列者可理解范围。<br>
+                    (存在被误导的可能，并且获得的信息量取决于双方能力差。)<br>
+                    过度观察有可能获得超出序列者理解范畴的信息，从而导致疯狂。
+                </p>
+                <div class="application">
+                    <strong>应用实例：</strong><br>
+                    1. 感知一杯下了毒的酒，可能看见[毒素], [酒]等，并通过类型帮助自己决策。<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- 序列8 -->
+        <div class="sequence-tier">
+            <div class="tier-number">序列8: 封装者 (Encapsulator)</div>
+            
+            <div class="ability-card">
+                <h3 class="ability-title">信息黑箱</h3>
+                <p class="mechanism">
+                    将一件物品的关键属性设为private，他人无法直接观测
+                </p>
+                <div class="application">
+                    <strong>应用实例：</strong><br>
+                    1. 将自己伤口设为private，隐藏伤口类型，流血量等
+                </div>
+            </div>
+            <div class="ability-card">
+                <h3 class="ability-title">方法绑定</h3>
+                <p class="mechanism">
+                    为自己的物品绑定一个简单动作，从而在满足触发条件时自动触发
+                </p>
+                <div class="application">
+                    <strong>应用实例：</strong><br>
+                    1. 为翻盖式打火机绑定[开盖→点火]，从而每次翻盖就自动点火。
+                </div>
+            </div>
+        </div>
+
+        <!-- 序列7 -->
+        <div class="sequence-tier">
+            <div class="tier-number">序列7: 继承祭司 (Inheritance Priest)</div>
+            
+            <div class="ability-card">
+                <h3 class="ability-title">类继承
+                    <span class="cost-tag">存在污染</span>
+                </h3>
+                <p class="mechanism">
+                    指定一个曾经感知过基础「类」标签的父类，强行继承其方法。同一时间只可指定一个父类。<br>
+                    （根据双方位阶差异以及继承的方法的数量决定此能力对自身的负荷）<br>
+                    每次继承后需要重新锚定自己的存在，不然可能积累存在污染并将父类的冗余代码保留。<br>
+                    冗余代码会影响序列者存在的独立性，并造成一系列潜在风险。
+                </p>
+                <div class="application">
+                    <strong>应用实例：</strong><br>
+                    1. 指定一个其他序列的某一序列作为父类，调用其超凡能力<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- 序列6 -->
+        <div class="sequence-tier">
+            <div class="tier-number">序列6: 多态领主 (Polymorphic Lord)</div>
+            
+            <div class="ability-card">
+                <h3 class="ability-title">接口具现
+                    <span class="cost-tag">存在污染</span>
+                    <span class="cost-tag">接口限制</span>
+                </h3>
+                <p class="mechanism">
+                    声明一个接口。在未来，可以指定某个implement此接口的子类并获得其对应的函数。<br>
+                    （根据选择的子类以及继承的方法的数量决定此能力对自身的负荷）<br>
+                    和类继承相比，接口更加灵活，并能随时切换子类转换自己形态以及可用的能力。<br><br>
+                    每次使用后需要重新锚定自己的存在，不然可能积累存在污染并将冗余代码保留。<br>
+                    冗余代码会造成一系列潜在风险，并阻止序列者删去用好了的接口并创建新的接口，
+                    从而限制序列者只能执行现有接口中的行为。
+                </p>
+                <div class="application">
+                    <strong>应用实例：</strong><br>
+                    1. 声明一个「可飞行」接口，然后随意变形为各类可飞行的事物。<br>
+                    2. 声明一个「超凡者」接口，然后不断切换不同序列，从而使用所有感知过的序列的能力。<br>
+                    （高负荷，高存在污染）<br>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
